@@ -18,6 +18,7 @@ public interface NotaRepository extends JpaRepository<Nota, Serializable>, Pagin
 	public abstract List<Nota> findByTitulo(String titulo); 
 	public abstract Nota findByNombreAndTitulo(String nombre, String titulo);
 	public abstract Nota findByNombreAndId(String nombre, long id);
+	public abstract Nota findById(long id);
 	
 	public abstract Page<Nota> findAll(Pageable pageable);
 }

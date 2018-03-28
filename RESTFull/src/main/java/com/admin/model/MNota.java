@@ -1,15 +1,14 @@
 package com.admin.model;
 
+import org.springframework.hateoas.ResourceSupport;
+
 import com.admin.entity.Nota;
 
-public class MNota {
+public class MNota extends ResourceSupport {
 	
-	private long id;
-	
-	private String nombre;
-	
-	private String titulo;
-	
+	private long notaId;	
+	private String nombre;	
+	private String titulo;	
 	private String contenido;
 	
 	public MNota() {
@@ -17,25 +16,25 @@ public class MNota {
 	}
 	
 	public MNota(Nota nota) {
-		this.id = nota.getId();
+		this.notaId = nota.getId();
 		this.nombre = nota.getNombre();
 		this.titulo = nota.getTitulo();
 		this.contenido = nota.getContenido();
 	}
 
-	public MNota(long id, String nombre, String titulo, String contenido) {
-		this.id = id;
+	public MNota(long notaId, String nombre, String titulo, String contenido) {
+		this.notaId = notaId;
 		this.nombre = nombre;
 		this.titulo = titulo;
 		this.contenido = contenido;
 	}
 
-	public long getId() {
-		return id;
+	public long getNotaId() {
+		return notaId;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setNotaId(long notaId) {
+		this.notaId = notaId;
 	}
 
 	public String getNombre() {
@@ -61,7 +60,6 @@ public class MNota {
 	public void setContenido(String contenido) {
 		this.contenido = contenido;
 	}
-	
 	
 }
 

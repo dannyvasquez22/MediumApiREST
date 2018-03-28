@@ -81,6 +81,10 @@ public class NotaService {
 		return new MNota(repositorio.findByNombre(nombre));
 	}
 	
+	public MNota obtenerPorId(long id) {
+		return new MNota(repositorio.findById(id));
+	}
+	
 	public MNota obtenerPorNombreId(String nombre, long id) {
 		return new MNota(repositorio.findByNombreAndId(nombre, id));
 	}
